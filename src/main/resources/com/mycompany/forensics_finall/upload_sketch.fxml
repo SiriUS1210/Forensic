@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.Cursor?>
+<Pane fx:id="upload_sketch_page" prefHeight="600.0" prefWidth="590.0" style="-fx-background-color: #29292a;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.forensics_finall.Upload_sketchControllerAPI">
+    <stylesheets>
+        <URL value="@upload_sketch.css" />
+    </stylesheets>
+    <children>
+       
+        <ImageView fx:id="backImage" fitHeight="30.0" fitWidth="30.0" layoutX="23.0" layoutY="22.0" onMouseClicked="#handleBack" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@backbutton.png" /> 
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+        <HBox alignment="CENTER" layoutX="127.0" layoutY="22.0" prefHeight="29.0" prefWidth="336.0" spacing="20">
+            <Button fx:id="openSketchButton" onAction="#handleOpenSketch" prefHeight="29.0" prefWidth="151.0" text="Open Sketch">
+                <font>
+                    <Font name="Futura Md BT Medium" size="14.0" />
+                </font>
+            </Button>
+            <Button fx:id="findMatchButton" onAction="#handleFindMatch" prefHeight="29.0" prefWidth="151.0" text="Find Match">
+                <font>
+                    <Font name="Futura Md BT Medium" size="14.0" />
+                </font>
+            </Button>
+        </HBox>
+        <HBox alignment="TOP_CENTER" layoutX="53.0" layoutY="71.0" prefHeight="300.0" prefWidth="485.0" spacing="20">
+            <VBox alignment="TOP_RIGHT" spacing="10">
+                <ImageView fx:id="sketch" fitHeight="250" fitWidth="200.0" preserveRatio="true" style="-fx-border-color: black;" />
+                <TextField fx:id="sketchPath" alignment="BASELINE_LEFT" editable="false" prefHeight="29.0" prefWidth="135.0" promptText="Sketch Path">
+                    <font>
+                        <Font name="Futura Md BT Medium" size="14.0" />
+                    </font>
+                </TextField>
+            </VBox>
+            <VBox spacing="10">
+                <ImageView fx:id="match" fitHeight="250" fitWidth="200" preserveRatio="true" style="-fx-border-color: black;" />
+                <TextField fx:id="matchPath" alignment="BASELINE_LEFT" editable="false" prefHeight="29.0" prefWidth="132.0" promptText="Match Path">
+                    <font>
+                        <Font name="Futura Md BT Medium" size="14.0" />
+                    </font>
+                </TextField>
+            </VBox>
+        </HBox>
+        <VBox layoutX="72.0" layoutY="378.0" prefHeight="191.0" prefWidth="447.0" spacing="10">
+            <Label fx:id="matchSimilarity" text="Match Similarity" textFill="WHITE">
+                <font>
+                    <Font name="Futura Md BT Medium" size="14.0" />
+                </font>
+            </Label>
+            <TextArea fx:id="matchProperties" editable="false" prefHeight="160.0" prefWidth="447.0" wrapText="true">
+                <font>
+                    <Font name="Futura Md BT Medium" size="14.0" />
+                </font>
+            </TextArea>
+        </VBox>
+    </children>
+</Pane>

@@ -1,0 +1,16 @@
+/* style.css */
+
+.root {
+    -fx-background-image: url('splash.jpg');
+    -fx-background-size: cover; /* Cover the entire area */
+    -fx-background-repeat: no-repeat; /* Prevent repeating the image */
+    -fx-background-position: center center; /* Center the image */
+}
+
+.text-overlay {
+    -fx-fill: white;
+    -fx-font-family: "Futura Bk BT Book";
+    -fx-font-size: 20px;
+    -fx-text-alignment: center;
+    -fx-font-weight: bold;
+}

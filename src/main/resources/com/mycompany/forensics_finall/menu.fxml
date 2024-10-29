@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.forensics_finall.MenuController">
+    <stylesheets>
+        <URL value="@menu.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="102.0" fitWidth="102.0" layoutX="263.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@drawing.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="sketch" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="175.0" layoutX="226.0" layoutY="243.0" onMousePressed="#sketch" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="30.0" strokeType="INSIDE" strokeWidth="3.0" width="175.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="651.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@upload.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="upload" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="175.0" layoutX="612.0" layoutY="243.0" onMousePressed="#upload" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="30.0" strokeType="INSIDE" strokeWidth="3.0" width="175.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Rectangle>
+      <Label alignment="CENTER" layoutX="369.0" layoutY="169.0" text="Please select an option to continue " textFill="WHITE">
+         <font>
+            <Font name="ProximaNova-Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="437.0" text="Create a Sketch" textFill="WHITE">
+         <font>
+            <Font name="Futura Md BT Medium" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="641.0" layoutY="437.0" text="Upload Sketch" textFill="WHITE">
+         <font>
+            <Font name="Futura Md BT Medium" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

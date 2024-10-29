@@ -1,0 +1,5 @@
+
+.mainFxmlClass {
+    -fx-background-image: url('splash.jpg');
+    -fx-background-size: cover;
+}
